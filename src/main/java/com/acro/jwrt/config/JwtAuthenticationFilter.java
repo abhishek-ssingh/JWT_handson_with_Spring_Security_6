@@ -24,6 +24,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {          //o
             @NonNull HttpServletResponse response,
             @NonNull FilterChain filterChain)
             throws ServletException, IOException {
+
             final String authHeader = request.getHeader("Authorization");        //this req.get...... contains the JWT token
             final String jwt;
             final String userEmail;
